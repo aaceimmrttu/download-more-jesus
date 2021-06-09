@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaceimmrttu/download_more_jesus.git"
+    "url": "git+https://github.com/aaceimmrttu/download-more-jesus.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aaceimmrttu/download_more_jesus/issues"
+    "url": "https://github.com/aaceimmrttu/download-more-jesus/issues"
   },
-  "homepage": "https://github.com/aaceimmrttu/download_more_jesus#readme"
+  "homepage": "https://github.com/aaceimmrttu/download-more-jesus#readme"
 }

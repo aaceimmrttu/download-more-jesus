@@ -1,4 +1,4 @@
-import navbar from './navbar.vue'
+import navbar from './src/navbar.vue'
 
 
 var app = new Vue({

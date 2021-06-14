@@ -12,7 +12,7 @@ pipeline {
                 sh 'npm run lint'
             }
         }
-        stage('build') {
+        stage('Build') {
             steps {
                 script {
                      def imageId = docker.build("rollforbugs/download-more-jesus:${env.BUILD_ID}")

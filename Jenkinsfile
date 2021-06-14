@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Lint') {
             agent {
                 docker {
                     image 'node:latest'

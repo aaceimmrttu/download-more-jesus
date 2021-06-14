@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                      def imageId = docker.build("rollforbugs/download-more-jesus:${env.BUILD_ID}")
-                     echo imageId
+                     echo "Built: ${imageId}"
                      //imageId.push()
                 }
             }

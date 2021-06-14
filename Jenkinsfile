@@ -1,15 +1,24 @@
 pipeline {
-    agent any
+    agent { label docker}
     stages {
         stage('Build') {
             agent {
                 docker {
-                    image 'node:lts-buster-slim'
+                    image 'node:latest'
                     args '-p 3000:3000'
                 }
             }
             steps {
-                sh 'npm install'
+                sh 'npm run lint'
+            }
+        }
+        stage('build') {
+            steps {
+                script {
+                     def imageId = docker.build("rollforbugs/download-more-jesus:${env.BUILD_ID}")
+                     echo imageId
+                     //imageId.push()
+                }
             }
         }
     }

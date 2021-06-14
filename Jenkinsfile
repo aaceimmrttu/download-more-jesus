@@ -13,6 +13,7 @@ pipeline {
             }
         }
         stage('Build') {
+            agent { label "docker"}
             steps {
                 script {
                      def imageId = docker.build("rollforbugs/download-more-jesus:${env.BUILD_ID}")

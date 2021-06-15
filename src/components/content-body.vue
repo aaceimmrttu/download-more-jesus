@@ -1,31 +1,60 @@
 <template>
-  <content id="vue-content-body">
+  <div id="vue-content-body">
+    <modal v-show="isModalVisible" @close="closeModal">
+      <template v-slot:header>
+        <h1>Terms and Conditions</h1>
+      </template>
+      <template v-slot:body>
+        <h1>blah blah</h1>
+      </template>
+      <template v-slot:footer>
+        <input id="modal-eula-submit" type="submit" class="btn btn-primary" value="Pray">
+      </template>
+    </modal>
     <section id="cloud-banner">
-      <article></article>
-    </section>
-      <header> Have you accepted Jesus Christ as your lord and savior? 基督</header> 
-      <div class="eula container">
-        <div class="row">
-          <div class="col-4">
-            <textarea id="eula-terms" class="w-100">eula</textarea>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-3">
-            <label for="eula-accept" class="form-check-label">I accept Jesus Christ as my lord and savior</label>
-          </div>
-          <div class="col-1">
-            <input id="eula-accept" type="checkbox" class="form-check-input">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2">
-            <input id="eula-submit" type="submit" class="btn btn-primary" value="Amen">
+      <article>
+        <div class="eula container">
+          <div class="row" style="padding-top: 40%;">
+            <div class="col-3"></div>
+            <div class="col-6">
+              <label for="eula-submit" class="form-check-label">
+                Would you accept Jesus Christ as your lord and savior?
+              </label>
             </div>
+            <div class="row">
+              <button type="button" class="btn" @click="showModal"><input id="eula-submit" type="submit" class="btn btn-primary" value="Yes"></button>
+            </div>
+          </div>
         </div>
-      </div>
-  </content>
+      </article>
+    </section>
+  </div>
 </template>
+
+<script>
+import modal from './modal'
+
+export default {
+  name: 'content-body',
+  components: {
+    modal
+  },
+  data() {
+    return {
+      isModalVisible: false,
+    };
+  },
+  methods: {
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    }
+  }
+};
+
+</script>
 
 
 <style>
@@ -52,7 +81,7 @@ header {
 
 }
 #cloud-banner > article {
-  background-image: url("https://png2.cleanpng.com/sh/eb3254700755777743847c5d78e9bef0/L0KzQYi4UsA5N5U5S5GAYULkQ4jsUBFiOJc1TZC6MUa6QIa9VcE2OWM8Sag7NUm5SYe9TwBvbz==/5a2a37e3aa0f05.1167056515127162596966.png");
+  background-image: url("~@/assets/scroll.png");
   background-size: 700px 700px;
   margin-left: auto;
   margin-right: auto;

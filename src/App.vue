@@ -1,13 +1,11 @@
 <template>
-    <navbar id="vue-navbar"></navbar>
-    <content-body id="vue-content-body"></content-body>
+  <navbar id="vue-navbar"></navbar>
+  <content-body id="vue-content-body"></content-body>
 </template>
 
 <script>
-
 import navbar from './components/navbar.vue'
 import contentBody from './components/content-body'
-
 export default {
   name: 'App',
   components: {

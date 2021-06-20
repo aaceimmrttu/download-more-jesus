@@ -12,14 +12,14 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav navbar-right mr-auto">
-        <li class="nav-item active">
-          <router-link class="navbar-brand" to="/">
-            Home <span class="sr-only">(current)</span>
+        <li class="nav-item" v-bind:class="{ bold:$route.name==='Home' }">
+          <router-link class="nav-link" to="/">
+            <span class="sr-only" >Home</span>
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" v-bind:class="{ bold:$route.name==='About' }">
           <router-link class="nav-link" to="about">
-            <span>About</span>
+            <span class="sr-only" >About</span>
           </router-link>
         </li>
       </ul>
@@ -39,6 +39,13 @@
   z-index: 1;
   width: 100%;
 
+}
+.bold {
+  font-weight: bolder;
+  background: darkgray;
+  background-blend-mode: darken;
+  height: 100%;
+  border-radius: 3px;
 }
 
 .navbar-brand {

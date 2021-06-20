@@ -22,7 +22,9 @@
               </label>
             </div>
             <div class="row">
-              <button type="button" class="btn" @click="showModal"><input id="eula-submit" type="submit" class="btn btn-primary" value="Yes"></button>
+              <button type="button" class="btn" @click="showModal">
+                <input id="eula-submit" type="submit" class="btn btn-primary" value="Yes"/>
+              </button>
             </div>
           </div>
         </div>
@@ -32,12 +34,12 @@
 </template>
 
 <script>
-import modal from './modal'
+import modal from './modal.vue';
 
 export default {
   name: 'content-body',
   components: {
-    modal
+    modal,
   },
   data() {
     return {
@@ -50,12 +52,11 @@ export default {
     },
     closeModal() {
       this.isModalVisible = false;
-    }
-  }
+    },
+  },
 };
 
 </script>
-
 
 <style>
 header {

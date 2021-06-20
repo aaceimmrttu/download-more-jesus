@@ -1,17 +1,16 @@
 <template>
   <navbar id="vue-navbar"></navbar>
-  <content-body id="vue-content-body"></content-body>
+  <router-view/>
 </template>
 
 <script>
-import navbar from './components/navbar.vue'
-import contentBody from './components/content-body'
+import navbar from './components/navbar.vue';
+
 export default {
   name: 'App',
   components: {
     navbar,
-    contentBody
-  }
+  },
 };
 </script>
 

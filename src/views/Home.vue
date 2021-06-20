@@ -1,18 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <content-body id="vue-content-body"></content-body>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<script lang="ts">
+import { defineComponent } from 'vue';
+import contentBody from '@/components/content-body.vue';
 
-export default {
+export default defineComponent({
   name: 'Home',
   components: {
-    HelloWorld
-  }
-}
+    contentBody,
+  },
+});
 </script>
+
+<style>
+#app {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: blue;
+}
+</style>
